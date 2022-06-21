@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileDB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="650"
-        Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -16,19 +15,26 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.4*"/>
             <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Margin="10" Grid.ColumnSpan="2">
+        <Border Margin="5,10,5,10" Grid.ColumnSpan="2">
             <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal">
-                <TextBox Margin="2" Width="450"></TextBox>
-                <Button Margin="2">Path Setting</Button>
+                <TextBox Name="folderPath" Margin="2" Width="550" IsReadOnly="True" Background="LightGray"></TextBox>
+                <Button Margin="5,2,0,2" Width="83"  Click="Show_FileDialog">Path Setting</Button>
             </StackPanel>
         </Border>
         <Border Grid.Row="1" Grid.RowSpan="2">
             <TreeView Name="fileTreeView"></TreeView>
         </Border>
         <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
-            <TextBox TextWrapping="Wrap" Name="recipeInfo"></TextBox>
+            <TextBox IsReadOnly="True" TextWrapping="Wrap" Name="recipeInfo"></TextBox>
+        </Border>
+        <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
+            <StackPanel Margin="10,0,10,0">
+                <Button Margin="0,0,0,5">Upload</Button>
+                <Button Margin="0,0,0,5">File Delete</Button>
+            </StackPanel>
         </Border>
     </Grid>
 </Window>

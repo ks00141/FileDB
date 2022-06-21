@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.Xml;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace FileDB
 {
@@ -30,14 +31,23 @@ namespace FileDB
 
         private void Show_FileDialog(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            CommonOpenFileDialog codf = new CommonOpenFileDialog()
+            {
+                IsFolderPicker = true
+            };
+            if(codf.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                folderPath.Text = codf.FileName;
+                Set_FileTreeView(codf.FileName);
+            }
             
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Set_FileTreeView(string filePath)
         {
-            DirectoryInfo di = new DirectoryInfo(@"C:\Users\wisol\Desktop\Export");
-            FileInfo[] files = di.GetFiles();
+           fileTreeView.Items.Clear();
+            DirectoryInfo di = new DirectoryInfo(filePath);
+            FileInfo[] files = di.GetFiles("*.xml");
             foreach(FileInfo file in files)
             {
                 TreeViewItem item = new TreeViewItem();
@@ -45,16 +55,22 @@ namespace FileDB
                 item.Expanded += new RoutedEventHandler((object _sender, RoutedEventArgs _e)=>ShowRecipeInfo(file));
                 fileTreeView.Items.Add(item);
             }
-
         }
 
         private string TranslateFileName(FileInfo File)
         {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(File.FullName);
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(File.FullName);
 
-            XmlNode _ppid = doc.SelectSingleNode("Root/PPID");
-            return _ppid.InnerText;
+                XmlNode _ppid = doc.SelectSingleNode("Root/PPID");
+                return _ppid.InnerText;
+            }
+            catch
+            {
+                return File.Name;
+            }
         }
 
         private void ShowRecipeInfo(FileInfo file)
@@ -68,8 +84,8 @@ namespace FileDB
             XmlNode _inspectionColumns = doc.SelectSingleNode("Root/FrontsideRecipe/ColumnNumber");
             XmlNode _inspectionRows = doc.SelectSingleNode("Root/FrontsideRecipe/RowNumber");
 
-            string recipeStr = "";
-            recipeStr = string.Format("ClusterRecipe : {0}{1}", _ppid.InnerText, Environment.NewLine);
+            string recipeStr = string.Empty;
+            recipeStr += string.Format("ClusterRecipe : {0}{1}", _ppid.InnerText, Environment.NewLine);
             recipeStr += string.Format("FrontsideRecipe : {0}{1}", _recipe.InnerText, Environment.NewLine);
             recipeStr += string.Format("InspectionDies : {0}{1}", _inspectionDies.InnerText, Environment.NewLine);
             recipeStr += string.Format("InspectionColumns : {0}{1}", _inspectionColumns.InnerText, Environment.NewLine);

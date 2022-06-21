@@ -1,0 +1,79 @@
+<Root>
+  <PPID>DG93CA4@MP1C\FINAL\75X-BF</PPID>
+  <MDLN>XPL</MDLN>
+  <SOFTREV>8610</SOFTREV>
+  <ClusterProgram>
+    <Datetime>4/29/2021 9:27:06 AM</Datetime>
+    <DiscoverRRFExportEnabled>Yes</DiscoverRRFExportEnabled>
+    <PNPExportMaps>
+      <Item>WWM</Item>
+      <Item>Z_Defect_Image_Save</Item>
+    </PNPExportMaps>
+  </ClusterProgram>
+  <FrontsideRecipe>
+    <RecipeName>DG93CA4@MP1C\FINAL\75X BF</RecipeName>
+    <InitialWaferOrientation>90.000000</InitialWaferOrientation>
+    <WaferOrientation>Normal</WaferOrientation>
+    <SubstrateLayout>Patterned</SubstrateLayout>
+    <TestableDies>11855</TestableDies>
+    <ColumnNumber>117</ColumnNumber>
+    <RowNumber>152</RowNumber>
+    <AllowOTFImageCapture>Yes</AllowOTFImageCapture>
+    <InspectionPasses>
+      <Item>
+        <InspectionPassName>Patterned 2D Frontside Inspection Pass A</InspectionPassName>
+        <InspectionOptions>PatternComparisonInspection ProbemarkInspection</InspectionOptions>
+        <InspectedDies>11855</InspectedDies>
+        <IlluminationConfig>
+          <BFIlluminationEnabled>Yes</BFIlluminationEnabled>
+          <BFIlluminationPowerSetting>Auto</BFIlluminationPowerSetting>
+          <BFIlluminationDesiredGSV>100.048800</BFIlluminationDesiredGSV>
+          <DFIlluminationEnabled>No</DFIlluminationEnabled>
+          <DFIlluminationPowerSetting>Manual</DFIlluminationPowerSetting>
+          <DFIlluminationDesiredGSV>200.000000</DFIlluminationDesiredGSV>
+        </IlluminationConfig>
+        <NumberOfROIs>34</NumberOfROIs>
+        <Magnification>7.5X</Magnification>
+        <InspectionConfigs>
+          <Item>
+            <DefectBinningStrategy>IDT 7um</DefectBinningStrategy>
+            <DetectionThresholdType>Auto</DetectionThresholdType>
+            <ManualThresholdValue>10</ManualThresholdValue>
+            <AutoThresholdSensitivity>Low</AutoThresholdSensitivity>
+            <DetectionStandardDeviation>3.000000</DetectionStandardDeviation>
+            <FilterMinimumDetectionSize>7.000000</FilterMinimumDetectionSize>
+            <FilterMinimumDetectionArea>7.000000</FilterMinimumDetectionArea>
+          </Item>
+          <Item>
+            <DefectBinningStrategy>PAD_20um</DefectBinningStrategy>
+            <DetectionThresholdType>Auto</DetectionThresholdType>
+            <ManualThresholdValue>10</ManualThresholdValue>
+            <AutoThresholdSensitivity>Medium</AutoThresholdSensitivity>
+            <DetectionStandardDeviation>5.000000</DetectionStandardDeviation>
+            <FilterMinimumDetectionSize>20.000000</FilterMinimumDetectionSize>
+            <FilterMinimumDetectionArea>20.000000</FilterMinimumDetectionArea>
+          </Item>
+          <Item>
+            <DefectBinningStrategy>
+            </DefectBinningStrategy>
+            <DetectionThresholdType>
+            </DetectionThresholdType>
+            <ManualThresholdValue>0</ManualThresholdValue>
+            <AutoThresholdSensitivity>
+            </AutoThresholdSensitivity>
+            <DetectionStandardDeviation>0.000000</DetectionStandardDeviation>
+            <FilterMinimumDetectionSize>0.000000</FilterMinimumDetectionSize>
+            <FilterMinimumDetectionArea>0.000000</FilterMinimumDetectionArea>
+          </Item>
+        </InspectionConfigs>
+        <DetectorTrainingType>Auto</DetectorTrainingType>
+        <TrainDetectorFrequency>PerWafer</TrainDetectorFrequency>
+        <AutoTrainCandidateSelection>Auto</AutoTrainCandidateSelection>
+        <AutoTrainNumberOfDies>0</AutoTrainNumberOfDies>
+        <AutoTrainDiePercentage>0.000000</AutoTrainDiePercentage>
+        <GammaCorrectionEnabled>
+        </GammaCorrectionEnabled>
+      </Item>
+    </InspectionPasses>
+  </FrontsideRecipe>
+</Root>

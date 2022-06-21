@@ -35,6 +35,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack.1.1.2\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack.1.1.2\lib\Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Sensors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack.1.1.2\lib\Microsoft.WindowsAPICodePack.Sensors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack.1.1.2\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.ShellExtensions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\WindowsAPICodePack.1.1.2\lib\Microsoft.WindowsAPICodePack.ShellExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -86,6 +101,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +109,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Export\10X-BF20211207110244245.xml" />
+    <Resource Include="Export\10X-BF20211207110247150.xml" />
+    <Resource Include="Export\10X-BF20211207113043054.xml" />
+    <Resource Include="Export\75X-BF20211207110250446.xml" />
+    <Resource Include="Export\75X-BF20211207110256601.xml" />
+    <Resource Include="Export\75X-BF20211207110313457.xml" />
+    <Resource Include="Export\75X-BF20211207110317174.xml" />
+    <Resource Include="Export\75X-BF20211207113013327.xml" />
+    <Resource Include="Export\75X-BF20211207113035462.xml" />
+    <Resource Include="Export\75X-BF20211207113040008.xml" />
+    <Resource Include="Export\75X-BF20211207113046522.xml" />
+    <Resource Include="Export\75X-BF20211208140203853.xml" />
+    <Resource Include="Export\75X-BF20220524082849041.xml" />
+    <Resource Include="Export\75X-BF20220621085043178.xml" />
+    <Resource Include="Export\75X-BF20220621134916192.xml" />
+    <Resource Include="Export\75X-BF20220621134931673.xml" />
+    <Resource Include="Export\75X-BF_ADC_test20211207113016482.xml" />
+    <Resource Include="Export\75X-BF_DM37020211207113032166.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
