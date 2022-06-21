@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileDB"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ReicpeUpload" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.25*"/>
@@ -32,8 +32,8 @@
         </Border>
         <Border Grid.Row="1" Grid.Column="2" Grid.RowSpan="2">
             <StackPanel Margin="10,0,10,0">
-                <Button Margin="0,0,0,5">Upload</Button>
-                <Button Margin="0,0,0,5">File Delete</Button>
+                <Button Click="Upload_Click" Margin="0,0,0,5">Upload</Button>
+                <Button Click="File_Delete" Margin="0,0,0,5">File Delete</Button>
             </StackPanel>
         </Border>
     </Grid>
